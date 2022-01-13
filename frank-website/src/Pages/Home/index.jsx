@@ -1,7 +1,8 @@
-import About from "../../Modules/About"
+
 import AboutTwo from "../../Modules/AboutTwo"
 import Header from "../../Modules/Header"
 import Hero from "../../Modules/Hero"
+import Servizi from "../../Modules/Servizi"
 
 
 
@@ -12,8 +13,10 @@ const Home=()=>{
             
             <Hero/>
 
-            <About/>
+            
             <AboutTwo/>
+
+            <Servizi/>
         </>
     )
 }

@@ -15,15 +15,16 @@ const Header = () =>{
 
     return(
         <>
-            <nav className={!transparency ? styles.nav :styles.navWhite}>
-                <img className={styles.logo} src={logo} alt="Logo" />
+            <nav className={`${styles.nav} ${transparency ? styles.coloured : ""}`}>
+            <div><img className={styles.logo} src={logo} alt="Logo" /></div>
+                
                 {/* <ul>
                     <li>About</li>
                     <li>Works</li>
                     <li>Services</li>
                     <li>Contact</li>
                 </ul> */}
-                <button onClick={()=> {if(!menuState){setMenuState(true)}else if(menuState){setMenuState(false)}}}><img src={menu} alt="Menu" /></button>
+                <button onClick={()=> {if(!menuState){setMenuState(true);document.body.classList.toggle(`${styles.oHidden}`) }else if(menuState){setMenuState(false);document.body.classList.toggle(`${styles.oHidden}`)}}}><img src={menu} alt="Menu" /></button>
             </nav>
             <Sidebar status={menuState} />
         </>

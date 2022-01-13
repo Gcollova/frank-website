@@ -2,32 +2,18 @@ import React from "react";
 import styles from "./Sidebar.module.scss";
 import { SidebarData } from "./SidebarData";
 
+
+
 const Sidebar = (props) => {
+  console.log(props.status)
 
  
-    if(props.status){
-
-        window.addEventListener('touchmove',((e)=>{ if(props.status) e.preventDefault()}),{passive:false})
-    }
-
-
-    
-    
+      
     
 
   return (
     <>
-      <div 
-        className={
-          props.status === false
-            ? styles.hidden
-            : props.status === undefined
-            ? styles.hidden
-            : props.status
-            ? styles.sidebar
-            : styles.hidden
-        }
-      >
+      <div className={`${styles.sidebar} ${props.status ? styles.hidden : ""}`}>
         <ul>
           {SidebarData.map((val, key) => {
             return (
