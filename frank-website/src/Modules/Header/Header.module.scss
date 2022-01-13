@@ -1,6 +1,6 @@
 .nav{
     width: 100%;
-    height: 120px;
+    height: 90px;
     position: fixed;
     display: flex;
     justify-content: right;
@@ -12,6 +12,7 @@
    
 
     background-color: transparent;
+    transition: all 0.6s ease;
 
 
     .logo {
@@ -64,4 +65,74 @@
             height: 40px;
         }
     }
+}
+
+.navWhite{
+    width: 100%;
+    height: 90px;
+    position: fixed;
+    display: flex;
+    justify-content: right;
+    
+    align-items: center;
+    z-index: 2;
+
+
+   
+
+    background-color: white;
+    transition: all 0.6s ease;
+
+
+    .logo {
+        position: absolute;
+        height: 70px;
+        top: 50%;
+        left: 30px ;
+        margin-top: -40px;
+    }
+
+
+    ul{
+        height: auto;
+        width: auto;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        padding-inline-start: 0px;
+        list-style-type: none;
+        margin: 0;
+        
+        bottom: 0px;
+
+
+
+        li{
+            height: 30px;
+            padding: 5px 20px;
+            margin: 0px 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: large;
+            transition: ease-out 0.4s all;
+
+            &:hover{
+                transform: scale(1.18);
+            }
+        }       
+        
+    }
+
+    button {
+    
+        padding: 10px 30px 0 0;
+        background-color: transparent;
+        border: none;
+
+        img{
+            height: 40px;
+        }
+    }
+
 }

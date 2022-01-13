@@ -1,9 +1,11 @@
 .sidebar{
+
     position: absolute;
     
     
-    height: 100%;
+    height: 300%;
     width: 100%;
+
     background-color: rgb(255, 255, 255);
     color: black;
     z-index: 0;
@@ -11,17 +13,30 @@
     transition: all 0.7s ease;
     animation: fader 0.6s ease;
     animation-fill-mode: forwards;
+
+    &::body{
+        overflow: hidden;
+    }
+
     
+    
+    @keyframes fader {
+        from {top: -100%;}
+        to {top:0%}       
+      }
 
     ul{
+
+        position: fixed;
+        left: 50%;
+        margin-left: -74.45px;
         
         list-style-type: none;
+
         padding: 220px 0 40px 0px;
-        margin: 0;
 
         display: flex;
-        flex-direction: column;
-        
+        flex-direction: column;        
         align-items: center;
         text-align: center;
         align-content: center;
@@ -35,10 +50,6 @@
         }
     }
 
-    @keyframes fader {
-        from {top: -1100px;}
-        to {top:0px}       
-      }
 }
 
 .hidden{
@@ -57,10 +68,14 @@
     
 
     ul{
+
+        position: fixed;
+        left: 50%;
+        margin-left: -74.45px;
         
         list-style-type: none;
         padding: 220px 0 40px 0px;
-        margin: 0;
+        
 
         display: flex;
         flex-direction: column;
@@ -79,7 +94,7 @@
     }
 
     @keyframes faderOut {
-        from {top: 0;}
-        to {top:-1100px}       
+        from {top: 0%;}
+        to {top:-100%}       
       }
 }

@@ -6,13 +6,16 @@ import Sidebar from '../Sidebar'
 
 
 const Header = () =>{
+    const [transparency,setTransparency] = useState(false);
+
+    window.addEventListener('scroll',((e)=>{if(window.scrollY > 50){setTransparency(true)} else if(window.scrollY === 0){setTransparency(false)}}))
     
     const [menuState,setMenuState]= useState(false);
-    console.log(menuState);
+    
 
     return(
         <>
-            <nav className={styles.nav}>
+            <nav className={!transparency ? styles.nav :styles.navWhite}>
                 <img className={styles.logo} src={logo} alt="Logo" />
                 {/* <ul>
                     <li>About</li>
