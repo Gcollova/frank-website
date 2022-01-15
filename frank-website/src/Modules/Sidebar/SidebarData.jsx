@@ -4,19 +4,23 @@
 export const SidebarData = [
 
     {
+        title:"Home",        
+        link:"/#home"
+    },
+    {
         title:"About",        
-        link:"/about"
+        link:"/#about"
     },
     {
         title:"Works",        
-        link:"/works"
+        link:"/#works"
     },
     {
         title:"Services",        
-        link:"/services"
+        link:"/#services"
     },
     {
         title:"Contact",        
-        link:"/contact"
+        link:"#"
     }
 ]

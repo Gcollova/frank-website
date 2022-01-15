@@ -10,7 +10,7 @@ const AboutTwo = () =>{
 
     return(
         <>
-            <main className={styles.main}>
+            <main className={styles.main} id="about">
             
                 
                 <div className={styles.profile}></div>

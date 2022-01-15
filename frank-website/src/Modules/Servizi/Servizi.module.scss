@@ -9,10 +9,13 @@
         .inner{
             margin-top: 70px;
             white-space: nowrap;
-            transition: transform 0.3s;
+            transition: transform 0.3s infinite;
     
     
             .slides{
+                position: relative;
+                
+                
                 display: inline-flex;
                 align-items: center;
                 justify-content: center;
@@ -20,14 +23,41 @@
                 width: 100%;
                 overflow: hidden;
                 background-color: green;
+                background-repeat: repeat;
+                
+                
+                
                 
                 color: #fff;
                 img{
                     height: 100%;
                     
                 }
+
                 
             }
         }
     }
+}
+
+.movementMinus{
+    animation: myMoveMinus 0.5s ease;    
+    animation-fill-mode: forwards;
+
+}
+@keyframes myMoveMinus{
+    from {left:-100%;}
+    to{ left:0%;}
+
+}
+
+.movementMax{
+    animation: myMoveMax 0.5s ease;    
+    animation-fill-mode: forwards;
+
+}
+@keyframes myMoveMax{
+    from {right:0;}
+    to{ right:100%;}
+
 }

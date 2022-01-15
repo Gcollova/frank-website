@@ -4,7 +4,7 @@ const Hero = () =>{
 
     return(
         <div>
-            <div className={styles.hero}>
+            <div className={styles.hero} id='home'>
                 
             </div>
         </div>

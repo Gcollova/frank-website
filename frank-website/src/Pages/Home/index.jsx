@@ -9,13 +9,10 @@ import Servizi from "../../Modules/Servizi"
 const Home=()=>{
     return(
         <>
-            <Header/>
+            <Header />
             
-            <Hero/>
-
-            
-            <AboutTwo/>
-
+            <Hero />            
+            <AboutTwo />
             <Servizi/>
         </>
     )
