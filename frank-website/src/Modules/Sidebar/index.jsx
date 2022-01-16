@@ -5,11 +5,7 @@ import { HashLink as Link } from 'react-router-hash-link';
 
 
 
-const Sidebar = (props) => {
-  console.log(props.status)
-
- 
-      
+const Sidebar = (props) => {      
     
 
   return (
