@@ -1,13 +1,17 @@
 import styles from './Carousel.module.scss'
 import { carouselData } from "../../libs/carouselData";
-import { useState } from "react";
+import { useState, } from "react";
 import { useSwipeable } from "react-swipeable";
+import slideLeft from '../../img/slide_left.png'
+import slideRight from '../../img/slide_right.png'
 
 const Carousel = () => {
     const [data, setData] = useState(carouselData);
   const [activeIndex, setActiveIndex] = useState(0);
   const [flaggerMinus, setFlaggerMinus] = useState(false);
-  const [flaggerMax, setFlaggerMax] = useState(false);
+  const [flaggerMax, setFlaggerMax] = useState(false);  
+  
+  
   
 
   const updateIndex = (newIndex) => {
@@ -46,19 +50,19 @@ const Carousel = () => {
     },
     });
     return(
-        <div {...handlers}>
+        <div {...handlers} >
                 <div className={styles.carousel}>
-            <div  className={`${styles.inner}`} id="slider">
+            <div  className={`${styles.inner}`} id="slider" >
                 {data.map((image, key) => {
                 return (
-                    <div  key={key} className={`${styles.slides} ${flaggerMinus ? styles.movementMinus : ""} ${flaggerMax ? styles.movementMax : ""}`}>
+                    <div   key={key} className={`${styles.slides} ${flaggerMinus ? styles.movementMinus : ""} ${flaggerMax ? styles.movementMax : ""}`}>
                     <img  src={image} alt={`carousel.img`} />
                     </div>
                 );
                 })}
             </div>
             <div className={styles.indicators}>
-                <button
+                <button className={styles.buttonLeft}
                 onClick={() => {
                     if (!flaggerMinus || flaggerMax) {
                     updateIndex(activeIndex - 1);
@@ -66,17 +70,17 @@ const Carousel = () => {
                     }
                 }}
                 >
-                Previous
+                <img src={slideLeft} alt="slide Left" />
                 </button>
-                <button
+                <button className={styles.buttonRight}
                 onClick={() => {
                     if (!flaggerMax || flaggerMinus) {
                     updateIndex(activeIndex + 1);
-                    setFlaggerMax(true);
+                    setFlaggerMax(true);                    
                     }
                 }}
                 >
-                Next
+                <img src={slideRight} alt="slide Right" />
                 </button>
             </div>
             </div>

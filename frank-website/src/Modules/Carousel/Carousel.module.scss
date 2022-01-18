@@ -1,4 +1,5 @@
 .carousel{
+    position: relative;
     overflow: hidden;
     
     .inner{
@@ -14,7 +15,7 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            height: 600px;
+            height: 100vh;
             width: 100%;
             overflow: hidden;
             background-color: green;
@@ -30,6 +31,38 @@
             }
 
             
+        }
+    }
+    .buttonLeft{        
+        position: absolute;
+        top: 60%;
+        background: transparent;
+        border: none;
+        filter: invert(1);
+        transition: all 0.4s ease;
+        &:active{
+            transform: scale(0.9);
+        }
+        img{
+            height: 45px;
+        }
+    }
+    .buttonRight{
+        
+        position: absolute;
+        top: 60%;
+        right: 0;
+        background: transparent;
+        border: none;
+        filter: invert(1);
+        transition: all 0.4s ease;
+        &:active{
+            transform: scale(0.9);
+            
+            
+        }
+        img{
+            height: 45px;
         }
     }
 }
